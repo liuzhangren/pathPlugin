@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs')
-const _ = (str) => {
+
+const find = (str) => {
   let arr = str.split('/')
   let r = ''
   const find = (cwd) => {
@@ -13,4 +14,5 @@ const _ = (str) => {
   find(`${process.cwd()}/../`)
   return r
 }
-module.exports = _
+
+module.exports = find
